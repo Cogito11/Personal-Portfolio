@@ -13,22 +13,9 @@ function sendEmail() {
 
   const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
 
-  const mailto = `mailto:cdbishop2005@gmail.com`
-    + `?subject=${encodeURIComponent(subject)}`
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&to=cdbishop2005@gmail.com`
+    + `&su=${encodeURIComponent(subject)}`
     + `&body=${encodeURIComponent(body)}`;
 
-  // Use a hidden link click — more reliable than window.location.href
-  const link = document.createElement('a');
-  link.href = mailto;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-
-  // Show fallback after a short delay in case no mail app opened
-  setTimeout(() => {
-    const fallback = document.getElementById('email-fallback');
-    fallback.style.display = 'block';
-    document.getElementById('fallback-content').textContent =
-      `To: cdbishop2005@gmail.com\nSubject: ${subject}\n\n${body}`;
-  }, 500);
+  window.open(gmailUrl, '_blank');
 }
