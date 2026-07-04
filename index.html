@@ -11,8 +11,13 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">Cole Bishop Development</div>
-  <ul class="nav-links">
+  <a class="nav-logo" href="#home">Cole Bishop Development</a>
+  <button class="nav-menu-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -29,7 +34,7 @@
   <div class="hero-content">
     <div class="hero-eyebrow">&#47;&#47; Always ready for a challenge</div>
     <h1 class="hero-name">Cole<br /><span>Bishop</span></h1>
-    <p class="hero-subtitle">A Software engineer interested in crafting performant, scalable systems, and enjoyable user experiences wherever possible.</p>
+    <p class="hero-subtitle">A software engineer interested in building performant, scalable systems and enjoyable user experiences wherever possible.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">View Work ↓</a>
       <a href="#contact" class="btn btn-ghost">Get in Touch</a>
@@ -73,7 +78,6 @@
         <div class="photo-frame" style="padding: 0;">
           <img src="Headshot.JPEG" alt="Your Name" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
         </div>
-        <div class="photo-accent"></div>
       </div>
       <div class="about-tags">
         <span class="tag">Full Stack</span>
@@ -84,10 +88,10 @@
     </div>
 
     <div class="about-text reveal" style="transition-delay:0.15s">
-      <h3>Making peoples lives easier<br />one piece of software at a time.</h3>
-      <p>I'm a software engineer with 3 years of experience building high quality applications that offer an easy to pick up user experience. I got into this field with the goal of making peoples lives better through software. Whether that comes about through building games for people to just sit down and have fun or developing real productivity tools that save people hours of time, I love the entire process.</p>
-      <p>I have experience across the board in full stack web development, Android mobile apps, game engines, relational databases, networking fundamentals, version control like Git, and dealing with any OS including Linux. All aspects of this field catch my interest which leads me to pick up skills and learn new things that make me a more well rounded developer that isnt limited to any specific niche.</p>
-      <p>Above all else, the bottom line is that I take pride in everything I do and that extends to my work especially. I like to know that any software I put into the world is as efficent and effective as possible. Outside of my interest in Software Engineering, my days consist of going on hikes, working out, and getting wrapped up in personal projects. As Tom Clancy once said, life is about learning and if life is learning, once you stop learning, you stop living. Because of that I like to always pick up new projects, hobbies, and always have something to engage me.</p>
+      <h3>Making people's lives easier,<br />one piece of software at a time.</h3>
+      <p>I'm a software engineer with three years of experience building high-quality applications that offer an intuitive user experience. I got into this field with the goal of making people's lives better through software. Whether that means building games that people can enjoy or creating productivity tools that save them hours of time, I love the entire process.</p>
+      <p>I have experience across the full stack, including web development, Android apps, game engines, relational databases, networking fundamentals, version control with Git, and working across operating systems such as Linux. Every aspect of this field interests me, which has helped me build a broad skill set and grow into a well-rounded developer rather than one limited to a single niche.</p>
+      <p>Above all else, I take pride in everything I do, and that applies especially to my work. I want every piece of software I put into the world to be as efficient and effective as possible. Outside of software engineering, my days are spent hiking, working out, and diving into personal projects. As Tom Clancy once said, life is about learning—and if life is learning, then once you stop learning, you stop living. Because of that, I like to keep taking on new projects, hobbies, and challenges that keep me engaged.</p>
 
       <div class="stats-row">
         <div class="stat-box">
@@ -116,7 +120,6 @@
 
   <div class="skills-grid">
     <div class="skill-category reveal">
-      <div class="skill-cat-icon">💻</div>
       <div class="skill-cat-title">Languages</div>
       <div class="skill-list">
         <span class="skill-pill">C/C++</span>
@@ -129,7 +132,6 @@
       </div>
     </div>
     <div class="skill-category reveal" style="transition-delay:0.1s">
-      <div class="skill-cat-icon">🧠</div>
       <div class="skill-cat-title">Concepts</div>
       <div class="skill-list">
         <span class="skill-pill">Object Oriented Programming</span>
@@ -140,7 +142,6 @@
       </div>
     </div>
     <div class="skill-category reveal" style="transition-delay:0.2s">
-      <div class="skill-cat-icon">🛠️</div>
       <div class="skill-cat-title">Tools & Technologies</div>
       <div class="skill-list">
         <span class="skill-pill">Git</span>
@@ -168,12 +169,11 @@
         <span class="project-type">Showcase Project</span>
         <div class="project-links">
           <a href="https://bluebazooka25.itch.io/mercy" class="project-link" target="_blank">Itch.io Page ↗</a>
-          <a href="Mercy Install Package (Patch 1.0.7).zip" class="project-link" download> Download ↗</a>
-				</a>
+          <a href="Mercy Install Package (Patch 1.0.7).zip" class="project-link" download>Download ↗</a>
         </div>
       </div>
       <div class="project-title">Mercy - Text Adventure Game</div>
-      <p class="project-desc">A terminal based text adventure game that I created to improve at my skills with complex logic and stremlining. This game is a fully fleshed out experience with the goal of matching content provided in a 3D action adventure game.</p>
+      <p class="project-desc">A terminal-based text adventure game that I created to sharpen my skills in complex logic and streamlining. This game is a fully fleshed-out experience designed to match the feel of a 3D action-adventure title.</p>
       <div class="project-stack">
         <span class="stack-tag">Objective C</span>
         <span class="stack-tag">Metadata Embedding</span>
@@ -191,7 +191,7 @@
         </div>
       </div>
       <div class="project-title">Iron Man Planner - Health Focused Calendar</div>
-      <p class="project-desc">A web based calendar application intended for a health focused audience. It provides tools for planning workout, tracking meals/calories, and planning your day.</p>
+      <p class="project-desc">A web-based calendar application intended for a health-focused audience. It offers tools for planning workouts, tracking meals and calories, and organizing the day.</p>
       <div class="project-stack">
         <span class="stack-tag">JavaScript</span>
         <span class="stack-tag">CSS</span>
@@ -207,7 +207,7 @@
         </div>
       </div>
       <div class="project-title">Movie Hunter - IMDB Access</div>
-      <p class="project-desc">This Android app allows users to access the IMDB database to see detailed information about any movie available. The app also enables users to create movie lists which they can save movies to on their device for later viewing along with full CRUD functionality.</p>
+      <p class="project-desc">This Android app allows users to access the IMDb database to view detailed information about any movie available. It also lets them create and save movie lists on their device for later viewing, with full CRUD functionality.</p>
       <div class="project-stack">
         <span class="stack-tag">Android Studio</span>
         <span class="stack-tag">Kotlin</span>
@@ -278,7 +278,7 @@
         </div>
       </div>
       <div class="project-title">Password Vault - Password Manager</div>
-      <p class="project-desc">Password Vault is an open source password manager application build with electron that I started developing to solve my own need for an easy to use local password manager. Since creating it, I have gotten feedback from other users that has encouraged me to continue development and maintain this as a consumer application. </p>
+      <p class="project-desc">Password Vault is an open-source password manager built with Electron that I started developing to solve my own need for an easy-to-use local password manager. Since creating it, I’ve received feedback from other users that encouraged me to continue developing and maintaining it as a consumer application.</p>
       <div class="project-stack">
         <span class="stack-tag">Electron</span>
         <span class="stack-tag">GitHub</span>
@@ -301,7 +301,7 @@
       <div class="edu-year">April 2026 - Present</div>
       <div class="edu-degree">Help Desk Technician</div>
       <div class="edu-school">Desert Lakes Solutions</div>
-      <div class="edu-desc">Being at Desert Lakes has given me experience with RMM tools, making scripts then pushing them to devices, and security review. Primarily I deal with troubleshooting technical issues and managing client devices above all else. In this position the most important things are an ability to adapt and learn as needed so that I can solve issues that arise as well as being able to communicate clearly in a friendly manner.</div>
+      <div class="edu-desc">Being at Desert Lakes has given me experience with RMM tools, writing scripts and deploying them to devices, and reviewing security. Primarily, I troubleshoot technical issues and manage client devices. In this role, adaptability, continuous learning, and clear communication are essential.</div>
     </div>
 
     <div class="edu-item reveal">
@@ -315,14 +315,14 @@
       <div class="edu-year">May - Aug 2025</div>
       <div class="edu-degree">Product Flow Specialist</div>
       <div class="edu-school">Best Buy</div>
-      <div class="edu-desc">During my time at Best Buy I had to quickly pick up new skills in response to a fast paced enviornment. Becoming a versatile employee was an invaluable skill as it allowed me to take on any role in the store without hesitation. I was able to reach this point thanks to skills in multitasking as I had to be able to juggle multiple tasks and jump from goal to goal seamlessly while still completing everything that was required.</div>
+      <div class="edu-desc">During my time at Best Buy, I had to quickly pick up new skills in response to a fast-paced environment. Becoming a versatile employee was invaluable, as it allowed me to step into any role in the store without hesitation. I developed strong multitasking skills as I learned to juggle multiple responsibilities and shift from one goal to the next while still completing everything required.</div>
     </div>
 
     <div class="edu-item reveal" style="transition-delay:0.15s">
       <div class="edu-year">May - Aug 2023</div>
       <div class="edu-degree">Production Manager</div>
       <div class="edu-school">Exponential Factors</div>
-      <div class="edu-desc">At Exponential Factors I managed a team of people in a warehouse enviornment to ensure that orders were fufilled on time and that everyone was working at peak efficency so that tasks were completed reliably. This position helped me develop leadership skills and on the fly adaptability that are crucial to working in a team during software development projects.</div>
+      <div class="edu-desc">At Exponential Factors, I managed a team in a warehouse environment to ensure orders were fulfilled on time and that everyone worked efficiently so tasks were completed reliably. This role helped me develop leadership skills and adaptability that are crucial to working effectively in software development teams.</div>
     </div>
   </div>
 </section>
@@ -337,7 +337,7 @@
   <div class="contact-wrapper">
     <div class="contact-left reveal">
       <h3>Let's build<br /><span>something great</span><br />together.</h3>
-      <p>My inbox is always open, whether it's about a full time role, contract work, or just to follow up about something catching your attention on my portfolio, feel free to reach out.</p>
+      <p>My inbox is always open—whether you're reaching out about a full-time role, contract work, or simply following up on something that caught your attention on my portfolio.</p>
 
       <div class="contact-links">
         <a href="https://mail.google.com/mail/?view=cm&to=cdbishop2005@gmail.com" target="_blank" class="contact-link">
