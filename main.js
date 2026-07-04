@@ -9,9 +9,20 @@ const navToggle = document.getElementById('mobile-nav-toggle');
 const navLinks = document.getElementById('nav-links');
 
 if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
+  navToggle.addEventListener('click', (event) => {
+    event.stopPropagation();
     const isOpen = navLinks.classList.toggle('is-open');
     navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  document.addEventListener('click', (event) => {
+    const clickedInsideMenu = navLinks.contains(event.target);
+    const clickedToggle = navToggle.contains(event.target);
+
+    if (!clickedInsideMenu && !clickedToggle && navLinks.classList.contains('is-open')) {
+      navLinks.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
   });
 
   navLinks.querySelectorAll('a').forEach((link) => {
