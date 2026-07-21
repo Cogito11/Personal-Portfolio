@@ -99,7 +99,11 @@ nav {
   letter-spacing: 0.01em;
   color: var(--ink);
   white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
 }
+.nav-brand:hover { color: var(--azure); }
 .nav-brand .brand-short { display: none; }
 
 /* HERO */
@@ -742,15 +746,17 @@ footer {
     background: rgba(10,14,21,0.94);
     backdrop-filter: blur(14px);
     border: 1px solid var(--line);
-    border-radius: 999px; /* clamps to a full pill while only the header row is visible */
+    border-radius: 24px; /* fixed value: stays constant through the open/close
+                             animation so it never fights with the height
+                             transition (that mismatch was what caused the
+                             corners to visibly pinch and re-expand) */
     box-shadow: 0 12px 30px rgba(0,0,0,0.35);
     overflow: hidden;
     padding: 0;
     gap: 0;
-    transition: border-radius 0.35s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
   }
   nav.nav-open {
-    border-radius: 26px; /* eases to a softer card radius once the list extends the height */
     box-shadow: 0 18px 40px rgba(0,0,0,0.5);
   }
 
