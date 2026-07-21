@@ -88,6 +88,8 @@ nav {
 }
 .nav-links a:hover { color: var(--ink); }
 .nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--ink); }
+.nav-links a.active::after { width: 100%; background: #ffffff; }
 
 .nav-header {
   display: flex; align-items: center; gap: 1rem;
@@ -189,10 +191,10 @@ nav {
 
 .hero-name {
   font-family: var(--font-display);
-  font-size: clamp(4rem, 11vw, 10rem);
+  font-size: clamp(2.6rem, 8vw, 6.6rem);
   font-weight: 700;
-  line-height: 0.9;
-  letter-spacing: 0.02em;
+  line-height: 1;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
   margin-bottom: 1.4rem;
   color: var(--ink);
@@ -229,6 +231,17 @@ nav {
   white-space: nowrap;
 }
 
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2.4rem;
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.95s forwards;
+}
+
 .btn {
   display: inline-flex; align-items: center; gap: 0.5rem;
   padding: 0.85rem 1.7rem;
@@ -250,7 +263,7 @@ nav {
   border: 1px solid var(--line-strong);
   color: var(--ink);
 }
-.btn-ghost:hover { border-color: var(--azure); color: var(--azure); transform: translateY(-2px); }
+.btn-ghost:hover { border-color: #ffffff; color: #ffffff; transform: translateY(-2px); }
 
 .status-dot {
   width: 7px; height: 7px;
@@ -279,6 +292,56 @@ nav {
 /* SECTIONS */
 section { padding: 6.5rem 4rem; position: relative; }
 section:nth-child(even) { background: var(--bg2); }
+
+/* PAGE HERO: compact header used on every page other than Home, keeps
+   the same visual language (dot grid, mono eyebrow) without the full
+   viewport-height treatment of the homepage hero. */
+.page-hero {
+  min-height: 34vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 9rem 2rem 3.5rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.page-hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 1rem;
+  position: relative; z-index: 1;
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.3rem, 5.5vw, 3.8rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 0.9rem;
+  position: relative; z-index: 1;
+}
+.page-hero p {
+  font-family: var(--font-body, inherit);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--ink-soft);
+  max-width: 540px;
+  position: relative; z-index: 1;
+}
+
+/* Reusable centered content block, used on Home for the About teaser
+   and Skills strip so they don't need the two-column About layout. */
+.centered-block {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+.centered-block .about-tags,
+.centered-block .skill-list { justify-content: center; }
+.centered-block .btn { margin-top: 1.8rem; }
 
 .section-header {
   display: flex; flex-direction: column; gap: 1rem;
@@ -411,19 +474,7 @@ section:nth-child(even) { background: var(--bg2); }
   position: relative;
   transition: border-color 0.25s, transform 0.25s, background 0.25s;
 }
-.skill-category::before, .skill-category::after {
-  content: '';
-  position: absolute;
-  width: 14px; height: 14px;
-  border: 1.5px solid var(--azure);
-  opacity: 0;
-  transition: opacity 0.25s;
-  pointer-events: none;
-}
-.skill-category::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
-.skill-category::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
 .skill-category:hover { border-color: var(--line-strong); background: var(--bg-panel-hover); transform: translateY(-4px); }
-.skill-category:hover::before, .skill-category:hover::after { opacity: 1; }
 .skill-cat-title {
   font-family: var(--font-display);
   font-size: 1.15rem;
@@ -445,13 +496,13 @@ section:nth-child(even) { background: var(--bg2); }
   letter-spacing: 0.02em;
 }
 
-/* PROJECTS */
-.projects-grid {
+/* SOFTWARE */
+.software-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 1.5rem;
 }
-.project-card {
+.software-card {
   background: var(--bg-panel);
   border: 1px solid var(--line);
   border-radius: 4px;
@@ -459,50 +510,34 @@ section:nth-child(even) { background: var(--bg2); }
   display: flex; flex-direction: column;
   transition: border-color 0.25s, transform 0.3s, box-shadow 0.3s, background 0.3s;
   position: relative;
-  overflow: visible;
 }
-.project-card::before, .project-card::after {
-  content: '';
-  position: absolute;
-  width: 16px; height: 16px;
-  border: 1.5px solid var(--azure);
-  opacity: 0;
-  transition: opacity 0.3s;
-  pointer-events: none;
-}
-.project-card::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
-.project-card::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
-.project-card:hover { border-color: var(--line-strong); background: var(--bg-panel-hover); transform: translateY(-6px); box-shadow: 0 24px 60px rgba(0,0,0,0.4); }
-.project-card:hover::before, .project-card:hover::after { opacity: 1; }
+.software-card:hover { border-color: var(--line-strong); background: var(--bg-panel-hover); transform: translateY(-6px); box-shadow: 0 24px 60px rgba(0,0,0,0.4); }
 
-.project-meta {
+.software-card-top {
   display: flex; justify-content: space-between; align-items: center;
   margin-bottom: 1.3rem;
 }
-.project-type {
+.software-logo-wrap {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--bg2);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.software-logo { width: 100%; height: 100%; object-fit: cover; display: block; }
+.software-type {
   font-family: var(--font-mono);
   font-size: 0.68rem;
   font-weight: 500;
   color: var(--azure);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  text-align: right;
 }
-.project-links { display: flex; gap: 0.7rem; }
-.project-link {
-  color: var(--ink-soft);
-  text-decoration: none;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  border: 1px solid var(--line);
-  padding: 0.28rem 0.65rem;
-  border-radius: 4px;
-  transition: color 0.2s, border-color 0.2s;
-}
-.project-link:hover { color: var(--azure); border-color: rgba(79,156,249,0.4); }
 
-.project-title {
+.software-title {
   font-family: var(--font-display);
   font-size: 1.4rem;
   font-weight: 700;
@@ -510,7 +545,7 @@ section:nth-child(even) { background: var(--bg2); }
   margin-bottom: 0.8rem;
   line-height: 1.25;
 }
-.project-desc {
+.software-desc {
   font-size: 0.92rem;
   font-weight: 300;
   color: rgba(238,242,247,0.62);
@@ -518,8 +553,9 @@ section:nth-child(even) { background: var(--bg2); }
   flex: 1;
   margin-bottom: 1.6rem;
 }
-.project-stack {
+.software-stack {
   display: flex; flex-wrap: wrap; gap: 0.4rem;
+  margin-bottom: 1.8rem;
 }
 .stack-tag {
   font-family: var(--font-mono);
@@ -530,6 +566,18 @@ section:nth-child(even) { background: var(--bg2); }
   border: 1px solid var(--line);
   border-radius: 4px;
   color: var(--ink-faint);
+}
+
+.software-actions {
+  display: flex; flex-wrap: wrap; gap: 0.7rem;
+  margin-top: auto;
+}
+.software-actions .btn {
+  flex: 1;
+  justify-content: center;
+  padding: 0.7rem 1.1rem;
+  font-size: 0.74rem;
+  white-space: nowrap;
 }
 
 /* EDUCATION */
