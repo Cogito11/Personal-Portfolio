@@ -357,7 +357,7 @@ section:nth-child(even) { background: var(--bg2); }
   padding: 0.32rem 0.75rem;
   border: 1px solid var(--line-strong);
   border-radius: 4px;
-  color: var(--azure);
+  color: #ffffff;
   letter-spacing: 0.03em;
 }
 
@@ -669,7 +669,7 @@ section:nth-child(even) { background: var(--bg2); }
   outline: none;
   transition: border-color 0.2s;
 }
-.form-input:focus, .form-textarea:focus { border-color: var(--azure); }
+.form-input:focus, .form-textarea:focus { border-color: #ffffff; }
 .form-input::placeholder, .form-textarea::placeholder { color: var(--ink-faint); font-size: 0.9rem; }
 .form-textarea { resize: vertical; min-height: 130px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
@@ -698,7 +698,7 @@ footer {
   text-decoration: none;
   transition: color 0.2s;
 }
-.footer-scroll:hover { color: var(--azure); }
+.footer-scroll:hover { color: #ffffff; }
 
 /* ANIMATIONS */
 @keyframes fadeUp {
@@ -731,7 +731,7 @@ footer {
 /* SCROLLBAR */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--azure-deep); border-radius: 2px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.45); border-radius: 2px; }
 
 /* MOBILE */
 @media (max-width: 900px) {
