@@ -367,14 +367,16 @@ section:nth-child(even) { background: var(--bg2); }
 /* ABOUT */
 .about-grid {
   display: grid;
-  grid-template-columns: 340px 1fr;
+  grid-template-columns: 1fr 340px;
   gap: 5rem;
   align-items: start;
 }
 
 .about-photo-wrapper {
   position: sticky; top: 8rem;
+  order: 2;
 }
+.about-text { order: 1; }
 
 .about-photo {
   position: relative;
@@ -514,11 +516,12 @@ section:nth-child(even) { background: var(--bg2); }
 .software-card:hover { border-color: var(--line-strong); background: var(--bg-panel-hover); transform: translateY(-6px); box-shadow: 0 24px 60px rgba(0,0,0,0.4); }
 
 .software-card-top {
-  display: flex; justify-content: space-between; align-items: flex-start; gap: 1.2rem;
+  display: flex; align-items: center; gap: 1rem;
   margin-bottom: 1.5rem;
 }
-.software-title-group { min-width: 0; }
+.software-title-group { min-width: 0; order: 2; }
 .software-logo-wrap {
+  order: 1;
   width: 62px; height: 62px;
   border-radius: 12px;
   border: 1px solid var(--line);
