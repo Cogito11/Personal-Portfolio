@@ -298,9 +298,9 @@ section:nth-child(even) { background: var(--bg2); }
    the same visual language (dot grid, mono eyebrow) without the full
    viewport-height treatment of the homepage hero. */
 .page-hero {
-  min-height: 34vh;
+  min-height: 100vh;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 9rem 2rem 3.5rem;
+  padding: 4rem;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -331,6 +331,27 @@ section:nth-child(even) { background: var(--bg2); }
   color: var(--ink-soft);
   max-width: 540px;
   position: relative; z-index: 1;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 2.4rem; left: 50%;
+  width: 22px; height: 22px;
+  z-index: 1;
+  animation: scrollHintBounce 2s ease-in-out infinite;
+}
+.scroll-hint::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 5px;
+  width: 12px; height: 12px;
+  border-left: 1.5px solid var(--ink-faint);
+  border-bottom: 1.5px solid var(--ink-faint);
+  transform: rotate(-45deg);
+}
+@keyframes scrollHintBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.45; }
+  50% { transform: translateX(-50%) translateY(8px); opacity: 1; }
 }
 
 /* Reusable centered content block, used on Home for the About teaser
@@ -883,10 +904,11 @@ footer {
   }
   .nav-links li:last-child a { border-bottom: none; }
   .nav-links a::after { display: none; }
-  .nav-links a:hover { color: var(--ink); background: rgba(255,255,255,0.06); }
+  .nav-links a:hover { color: var(--ink); }
 
   section { padding: 5rem 1.5rem; }
   .hero { padding: 7rem 1.5rem 3rem; }
+  .page-hero { padding: 7rem 1.5rem 3rem; }
   .hero-horizon-point { width: 300px; height: 90px; }
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
   .about-photo-wrapper { position: static; max-width: 260px; }
