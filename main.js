@@ -61,3 +61,26 @@ function sendEmail() {
 
   window.open(gmailUrl, '_blank');
 }
+
+// Make each software card clickable — takes you to its first action link
+// (e.g. the live site / itch.io page / GitHub repo), unless the click
+// landed directly on one of the card's own buttons, which handle
+// themselves normally.
+document.querySelectorAll('.software-card').forEach((card) => {
+  const primaryLink = card.querySelector('.software-actions a');
+  if (!primaryLink) return;
+
+  card.addEventListener('click', (event) => {
+    if (event.target.closest('a, button')) return;
+
+    if (primaryLink.hasAttribute('download')) {
+      primaryLink.click();
+      return;
+    }
+    if (primaryLink.getAttribute('target') === '_blank') {
+      window.open(primaryLink.href, '_blank');
+      return;
+    }
+    window.location.href = primaryLink.href;
+  });
+});
