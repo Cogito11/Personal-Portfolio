@@ -126,34 +126,6 @@ nav {
   display: none;
 }
 
-/* SHOOTING STARS: subtle diagonal streaks used on every page except Home */
-.starfield {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: -1;
-}
-.star-streak {
-  position: absolute;
-  top: var(--sy, 10%);
-  left: var(--sx, -10%);
-  width: 130px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.85), transparent);
-  border-radius: 999px;
-  opacity: 0;
-  transform: rotate(35deg);
-  animation: starStreak var(--sdur, 8s) linear infinite;
-  animation-delay: var(--sdelay, 0s);
-}
-@keyframes starStreak {
-  0% { transform: translate(0, 0) rotate(35deg) scaleX(0.4); opacity: 0; }
-  3% { opacity: 1; transform: translate(4vw, 3vh) rotate(35deg) scaleX(1); }
-  14% { opacity: 0; transform: translate(48vw, 34vh) rotate(35deg) scaleX(1); }
-  100% { opacity: 0; transform: translate(48vw, 34vh) rotate(35deg) scaleX(1); }
-}
-
 /* HORIZON LIGHT: a soft point behind BISHOP that thins out into a
    horizontal line spanning the hero */
 .hero-horizon {
