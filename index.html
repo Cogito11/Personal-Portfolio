@@ -3,436 +3,208 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cole Bishop Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+<title>Bishop Development | Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+<div id="top"></div>
+
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#home">Cole Bishop Development</a>
-  <button class="nav-menu-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+  <div class="nav-header">
+    <button class="nav-menu-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <a href="index.html" class="nav-brand">
+      <span class="brand-full">Bishop Development</span>
+      <span class="brand-short">Bishop Dev</span>
+    </a>
+  </div>
   <ul class="nav-links" id="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#background">Background</a></li>
-    <li><a href="#contact">Contact & Resources</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="software.html">Software</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg-grid"></div>
-  <div class="hero-glow"></div>
+  <div class="hero-horizon">
+    <div class="hero-horizon-point"></div>
+    <div class="hero-horizon-line"></div>
+  </div>
 
   <div class="hero-content">
-    <div class="hero-eyebrow">&#47;&#47; Always ready for a challenge</div>
-    <h1 class="hero-name">Cole<br />Bishop</h1>
-    <p class="hero-subtitle">A software engineer interested in building performant, scalable systems and enjoyable user experiences wherever possible.</p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary">View Work ↓</a>
-      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-    </div>
-  </div>
-
-  <div class="hero-visual">
-    <div class="hero-terminal">
-      <div class="terminal-bar">
-        <div class="t-dot"></div>
-        <div class="t-dot"></div>
-        <div class="t-dot"></div>
-        <div class="terminal-title">~/cole-bishop - bash</div>
-      </div>
-      <div class="terminal-body">
-        <div><span class="t-prompt">></span> <span class="t-cmd">whoami</span></div>
-        <div class="t-out">cole_bishop</div>
-        <div style="margin-top:0.5rem"><span class="t-prompt">></span> <span class="t-cmd">cat profile.json</span></div>
-        <div class="t-out">{</div>
-        <div class="t-out">&nbsp;&nbsp;"role": <span>"Software Engineer"</span>,</div>
-        <div class="t-out">&nbsp;&nbsp;"experience": <span>"3 years"</span>,</div>
-        <div class="t-out">&nbsp;&nbsp;"focus": <span>["Full Stack", "Android"]</span>,</div>
-        <div class="t-out">&nbsp;&nbsp;"open_to_work": <span>True</span></div>
-        <div class="t-out">}</div>
-        <div style="margin-top:0.5rem"><span class="t-prompt">></span> <span class="t-cmd"><span class="t-cursor"></span></span></div>
-      </div>
+    <h1 class="hero-name">Bishop Development</h1>
+    <p class="hero-subheading"><span>Building Software with Purpose</span></p>
+    <div class="hero-actions">
+      <a href="software.html" class="btn btn-ghost">View Projects</a>
+      <a href="contact.html" class="btn btn-ghost">Get In Touch</a>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
+<!-- ABOUT TEASER -->
+<section id="intro">
   <div class="section-header reveal">
-    <h2 class="section-title">About Me</h2>
-    <div class="section-line"></div>
+    <div class="section-title-row">
+      <h2 class="section-title">About</h2>
+      <div class="section-line"></div>
+    </div>
   </div>
 
-  <div class="about-grid">
-    <div class="about-photo-wrapper reveal">
-      <div class="about-photo">
-        <div class="photo-frame" style="padding: 0;">
-          <img src="Headshot.JPEG" alt="Your Name" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
-        </div>
-      </div>
-      <div class="about-tags">
-        <span class="tag">Full Stack</span>
-        <span class="tag">Android</span>
-        <span class="tag">Databases</span>
-        <span class="tag">OOP</span>
-      </div>
+  <div class="centered-block reveal">
+    <p>I'm a software engineer with three years of experience designing and building applications across the full stack, Android, game engines, and relational databases. I enjoy turning complex problems into intuitive, reliable software that provides people with real value. My goal has always been to create things that have a meaningful, positive impact on people's lives.</p>
+    <div class="about-tags">
+      <span class="tag">Full Stack</span>
+      <span class="tag">Android</span>
+      <span class="tag">Databases</span>
+      <span class="tag">OOP</span>
     </div>
-
-    <div class="about-text reveal" style="transition-delay:0.15s">
-      <h3>Making people's lives easier,<br />one app at a time.</h3>
-      <p>I'm a software engineer with three years of experience building high-quality applications that offer an intuitive user experience. I got into this field with the goal of making people's lives better through software. Whether that means building games that people can enjoy or creating productivity tools that save them hours of time, I love the entire process.</p>
-      <p>I have experience across the full stack, including web development, Android apps, game engines, relational databases, networking fundamentals, version control with Git, and working across operating systems such as Linux. Every aspect of this field interests me, which has helped me build a broad skill set and grow into a well-rounded developer rather than one limited to a single niche.</p>
-      <p>Above all else, I take pride in everything I do, and that applies especially to my work. I want every piece of software I put into the world to be as efficient and effective as possible. Outside of software engineering, my days are spent hiking, working out, and diving into personal projects. As Tom Clancy once said, life is about learning, and if life is learning, then once you stop learning, you stop living. Because of that, I like to keep taking on new projects, hobbies, and challenges that keep me engaged.</p>
-
-      <div class="stats-row">
-        <div class="stat-box">
-          <div class="stat-num">3</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">7</div>
-          <div class="stat-label">Projects</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">5x</div>
-          <div class="stat-label">Deans List</div>
-        </div>
-      </div>
-    </div>
+    <a href="about.html" class="btn btn-primary">More About Me</a>
   </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
+<!-- FEATURED SOFTWARE -->
+<section id="featured-software">
   <div class="section-header reveal">
-    <h2 class="section-title">Skills</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="skills-grid">
-    <div class="skill-category reveal">
-      <div class="skill-cat-title">Languages</div>
-      <div class="skill-list">
-        <span class="skill-pill">C/C++</span>
-        <span class="skill-pill">C#</span>
-        <span class="skill-pill">Python</span>
-        <span class="skill-pill">Kotlin</span>
-        <span class="skill-pill">JavaScript</span>
-        <span class="skill-pill">SQL</span>
-        <span class="skill-pill">MIPS</span>
-      </div>
-    </div>
-    <div class="skill-category reveal" style="transition-delay:0.1s">
-      <div class="skill-cat-title">Concepts</div>
-      <div class="skill-list">
-        <span class="skill-pill">Object Oriented Programming</span>
-        <span class="skill-pill">Full Stack Development</span>
-        <span class="skill-pill">Data Structures & Algorithms</span>
-        <span class="skill-pill">REST APIs</span>
-        <span class="skill-pill">Relational Databases</span>
-      </div>
-    </div>
-    <div class="skill-category reveal" style="transition-delay:0.2s">
-      <div class="skill-cat-title">Tools & Technologies</div>
-      <div class="skill-list">
-        <span class="skill-pill">Git</span>
-        <span class="skill-pill">Linux</span>
-        <span class="skill-pill">React</span>
-        <span class="skill-pill">Node.js</span>
-        <span class="skill-pill">Android Studio</span>
-        <span class="skill-pill">Godot</span>
-        <span class="skill-pill">Electron</span>
-      </div>
+    <div class="section-title-row">
+      <h2 class="section-title">Featured Software</h2>
+      <div class="section-line"></div>
     </div>
   </div>
-</section>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="section-header reveal">
-    <h2 class="section-title">Projects</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="projects-grid">
-    <div class="project-card reveal">
-      <div class="project-meta">
-        <span class="project-type">Showcase Project</span>
-        <div class="project-links">
-          <a href="https://bluebazooka25.itch.io/mercy" class="project-link" target="_blank">Itch.io Page ↗</a>
-          <a href="Mercy Install Package (Patch 1.0.7).zip" class="project-link" download>Download ↗</a>
+  <div class="software-grid">
+    <div class="software-card reveal">
+      <div class="software-card-top">
+        <div class="software-title-group">
+          <div class="software-title">Amble Finance</div>
+          <div class="software-subtitle">Personal Finance & Budgeting Tool</div>
+        </div>
+        <div class="software-logo-wrap">
+          <img src="images/amble-finance-logo.png" alt="" class="software-logo"
+               onerror="if(!this.dataset.fb){this.dataset.fb='1';this.src='images/software-fallback.png';}else{this.closest('.software-logo-wrap').style.display='none';}">
         </div>
       </div>
-      <div class="project-title">Mercy - Text Adventure Game</div>
-      <p class="project-desc">A terminal-based text adventure game that I created to sharpen my skills in complex logic and streamlining. This game is a fully fleshed-out experience designed to match the feel of a 3D action-adventure title.</p>
-      <div class="project-stack">
-        <span class="stack-tag">Objective C</span>
-        <span class="stack-tag">Metadata Embedding</span>
-        <span class="stack-tag">Itch.io</span>
-        <span class="stack-tag">Terminal</span>
-      </div>
-    </div>
-
-    <div class="project-card reveal" style="transition-delay:0.1s">
-      <div class="project-meta">
-        <span class="project-type">Team Project</span>
-        <div class="project-links">
-          <a href="https://github.com/Oracle451/Personal-Planner" class="project-link" target="_blank">GitHub ↗</a>
-          <a href="https://oracle451.github.io/Personal-Planner/" class="project-link" target="_blank">Live ↗</a>
-        </div>
-      </div>
-      <div class="project-title">Iron Man Planner - Health Focused Calendar</div>
-      <p class="project-desc">A web-based calendar application intended for a health-focused audience. It offers tools for planning workouts, tracking meals and calories, and organizing the day.</p>
-      <div class="project-stack">
-        <span class="stack-tag">JavaScript</span>
-        <span class="stack-tag">CSS</span>
-        <span class="stack-tag">HTML</span>
-      </div>
-    </div>
-
-    <div class="project-card reveal" style="transition-delay:0.2s">
-      <div class="project-meta">
-        <span class="project-type">Android App</span>
-        <div class="project-links">
-          <a href="https://github.com/Oracle451/AppDevFinalProject" class="project-link" target="_blank">GitHub ↗</a>
-        </div>
-      </div>
-      <div class="project-title">Movie Hunter - IMDB Access</div>
-      <p class="project-desc">This Android app allows users to access the IMDb database to view detailed information about any movie available. It also lets them create and save movie lists on their device for later viewing, with full CRUD functionality.</p>
-      <div class="project-stack">
-        <span class="stack-tag">Android Studio</span>
-        <span class="stack-tag">Kotlin</span>
-        <span class="stack-tag">Room Database</span>
-        <span class="stack-tag">API Integration</span>
-      </div>
-    </div>
-
-    <div class="project-card reveal" style="transition-delay:0.3s">
-      <div class="project-meta">
-        <span class="project-type">Productivity Tool</span>
-        <div class="project-links">
-          <a href="https://github.com/Oracle451/CS-312-Final-Project" class="project-link" target="_blank">GitHub ↗</a>
-        </div>
-      </div>
-      <div class="project-title">Task Manager - Web App</div>
-      <p class="project-desc">This task manager application integrates with a database backend to allow for team oriented task management. Team members can access this platform to assign tasks, view overall progress, and update information on the database as needed. The primary skills I gained from this were backend database integration, React frontend development, and Node.js experience.</p>
-      <div class="project-stack">
-        <span class="stack-tag">Full Stack</span>
-        <span class="stack-tag">React</span>
-        <span class="stack-tag">Node.js</span>
-        <span class="stack-tag">PostgreSQL</span>
-      </div>
-    </div>
-
-    <div class="project-card reveal" style="transition-delay:0.3s">
-      <div class="project-meta">
-        <span class="project-type">Engine Level Modification</span>
-        <div class="project-links">
-          <a href="https://github.com/Oracle451/IMG-420-Final-Project" class="project-link" target="_blank">GitHub ↗</a>
-          <a href="https://www.youtube.com/watch?v=VdhjqB3qmBI" class="project-link" target="_blank">Demo Video ↗</a>
-        </div>
-      </div>
-      <div class="project-title">Slime Chronicles - 2D Platformer</div>
-      <p class="project-desc">This 2D platformer was more than just a chance to become more familiar with game development. During this project I learned how to create extensions for the Godot engine itself and apply them during gameplay to enhance the user experience.</p>
-      <div class="project-stack">
-        <span class="stack-tag">GD Script</span>
-        <span class="stack-tag">Godot</span>
-        <span class="stack-tag">C#</span>
-        <span class="stack-tag">GDExtensions</span>
-      </div>
-    </div>
-
-    <div class="project-card reveal" style="transition-delay:0.3s">
-      <div class="project-meta">
-        <span class="project-type">Client Coordination</span>
-        <div class="project-links">
-          <a href="https://github.com/Oracle451/KIMinder360MobileApp" class="project-link" target="_blank">GitHub ↗</a>
-          <a href="https://sce.nau.edu/capstone/projects/CS/2026/KIMinder360_F25/index.html" class="project-link" target="_blank">Website ↗</a>
-        </div>
-      </div>
-      <div class="project-title">KIMinder360 - Self Improvement App</div>
-      <p class="project-desc">This Mobile app for Android focuses on dynamic real world situational awareness training for users and includes comprehensive functionality for a customizable user experience. During this project I gained experience working with a real client and learned how to understand exactly what they were asking for so that I could provide it. </p>
-      <div class="project-stack">
-        <span class="stack-tag">Android Studio</span>
-        <span class="stack-tag">Android Compose</span>
-        <span class="stack-tag">Kotlin</span>
-        <span class="stack-tag">Google Play</span>
-      </div>
-    </div>
-
-    <div class="project-card reveal" style="transition-delay:0.3s">
-      <div class="project-meta">
-        <span class="project-type">Open Source</span>
-        <div class="project-links">
-          <a href="https://github.com/Cogito11/Password-Vault" class="project-link" target="_blank">GitHub ↗</a>
-          <a href="https://cogito11.github.io/Password-Vault/" class="project-link" target="_blank">Website ↗</a>
-        </div>
-      </div>
-      <div class="project-title">Password Vault - Password Manager</div>
-      <p class="project-desc">Password Vault is an open-source password manager built with Electron that I started developing to solve my own need for an easy-to-use local password manager. Since creating it, I’ve received feedback from other users that encouraged me to continue developing and maintaining it as a consumer application.</p>
-      <div class="project-stack">
-        <span class="stack-tag">Electron</span>
-        <span class="stack-tag">GitHub</span>
-        <span class="stack-tag">Encryption</span>
-        <span class="stack-tag">UI Design</span>
-      </div>
-    </div>
-
-    <div class="project-card reveal" style="transition-delay:0.3s">
-      <div class="project-meta">
-        <span class="project-type">Real Utility</span>
-        <div class="project-links">
-          <a href="https://github.com/Cogito11/Amble-Finance" class="project-link" target="_blank">GitHub ↗</a>
-          <a href="https://cogito11.github.io/Amble-Finance/" class="project-link" target="_blank">Website ↗</a>
-        </div>
-      </div>
-      <div class="project-title">Amble Finance - Budgeting Tool</div>
-      <p class="project-desc">Amble Finance is a free and easy to use budgeting tool and personal finance tracker built from the ground up to make financial responsibility simple for anyone. I built it to provide a free budgeting solution that provided all the functionality that myself and those I know could want for keeping track of our finances.</p>
-      <div class="project-stack">
+      <p class="software-desc">A free and easy to use budgeting tool and personal finance tracker built from the ground up to make financial responsibility simple for anyone, with all the functionality I and those I know could want for keeping track of our finances.</p>
+      <div class="software-stack">
         <span class="stack-tag">Electron</span>
         <span class="stack-tag">Community Feedback</span>
         <span class="stack-tag">Visual Data</span>
         <span class="stack-tag">UX Design</span>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- BACKGROUND -->
-<section id="background">
-  <div class="section-header reveal">
-    <h2 class="section-title">Background</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="edu-timeline">
-    <div class="edu-item reveal" style="transition-delay:0.3s">
-      <div class="edu-year">April 2026 - Present</div>
-      <div class="edu-degree">Help Desk Technician</div>
-      <div class="edu-school">Desert Lakes Solutions</div>
-      <div class="edu-desc">Being at Desert Lakes has given me experience with RMM tools, writing scripts and deploying them to devices, and reviewing security. Primarily, I troubleshoot technical issues and manage client devices. In this role, adaptability, continuous learning, and clear communication are essential.</div>
-    </div>
-
-    <div class="edu-item reveal">
-      <div class="edu-year">2023 - 2026</div>
-      <div class="edu-degree">B.S. Software Engineering</div>
-      <div class="edu-school">Northern Arizona University, Flagstaff, Az · GPA 3.97 / 4.0 · Deans List Fall 2023 - Spring 2026</div>
-      <div class="edu-desc">Specialized in full stack development and Android mobile app work. Relevant coursework: Parallel Programming, Data Structures and Algorithms, Database Systems, Computer Networks, Software Engineering, Mobile App Development, Web Programming, Game Engines.</div>
-    </div>
-
-    <div class="edu-item reveal" style="transition-delay:0.3s">
-      <div class="edu-year">May - Aug 2025</div>
-      <div class="edu-degree">Product Flow Specialist</div>
-      <div class="edu-school">Best Buy</div>
-      <div class="edu-desc">During my time at Best Buy, I had to quickly pick up new skills in response to a fast-paced environment. Becoming a versatile employee was invaluable, as it allowed me to step into any role in the store without hesitation. I developed strong multitasking skills as I learned to juggle multiple responsibilities and shift from one goal to the next while still completing everything required.</div>
-    </div>
-
-    <div class="edu-item reveal" style="transition-delay:0.15s">
-      <div class="edu-year">May - Aug 2023</div>
-      <div class="edu-degree">Production Manager</div>
-      <div class="edu-school">Exponential Factors</div>
-      <div class="edu-desc">At Exponential Factors, I managed a team in a warehouse environment to ensure orders were fulfilled on time and that everyone worked efficiently so tasks were completed reliably. This role helped me develop leadership skills and adaptability that are crucial to working effectively in software development teams.</div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-header reveal">
-    <h2 class="section-title">Contact & Resources</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="contact-wrapper">
-    <div class="contact-left reveal">
-      <h3>Let's build<br /><span>something great</span><br />together.</h3>
-      <p>My inbox is always open. Whether you're reaching out about a full-time role, contract work, or simply following up on something that caught your attention on my portfolio.</p>
-
-      <div class="contact-links">
-        <a href="https://mail.google.com/mail/?view=cm&to=cdbishop2005@gmail.com" target="_blank" class="contact-link">
-		  <div class="contact-link-icon">✉</div>
-		  <div class="contact-link-text">
-			<div class="contact-link-label">Email</div>
-			<div class="contact-link-value">cdbishop2005@gmail.com</div>
-		  </div>
-		  <span class="contact-link-arrow"
-			title="Copy email"
-			onclick="event.preventDefault(); navigator.clipboard.writeText('cdbishop2005@gmail.com'); this.textContent='✓';"
-			style="cursor:pointer; transition: color 0.2s;">
-			⧉
-		  </span>
-		</a>
-
-        <a href="https://github.com/Cogito11" class="contact-link" target="_blank">
-          <div class="contact-link-icon">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-          </div>
-          <div class="contact-link-text">
-            <div class="contact-link-label">GitHub</div>
-            <div class="contact-link-value">github.com/Cogito11</div>
-          </div>
-          <span class="contact-link-arrow">→</span>
-        </a>
-
-        <a href="https://www.linkedin.com/in/cole-b-56060323a/" class="contact-link" target="_blank">
-          <div class="contact-link-icon">in</div>
-          <div class="contact-link-text">
-            <div class="contact-link-label">LinkedIn</div>
-            <div class="contact-link-value">linkedin.com/in/colebishop</div>
-          </div>
-          <span class="contact-link-arrow">→</span>
-        </a>
-
-        <a href="Cole_Bishop_Software_Engineer_Resume.pdf" class="contact-link" target="_blank">
-          <div class="contact-link-icon">🗎</div>
-          <div class="contact-link-text">
-            <div class="contact-link-label">Resume</div>
-            <div class="contact-link-value">My Resume</div>
-          </div>
-          <span class="contact-link-arrow">→</span>
-        </a>
+      <div class="software-actions">
+        <a href="https://cogito11.github.io/Amble-Finance/" class="btn btn-ghost" target="_blank">Website</a>
+        <a href="https://github.com/Cogito11/Amble-Finance" class="btn btn-ghost" target="_blank">GitHub</a>
       </div>
     </div>
 
-    <div class="reveal" style="transition-delay:0.15s">
-      <div class="contact-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Name</label>
-            <input type="text" id="contact-name" class="form-input" placeholder="John Smith" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Email</label>
-            <input type="email" id="contact-email" class="form-input" placeholder="john@company.com" />
-          </div>
+    <div class="software-card reveal" style="transition-delay:0.1s">
+      <div class="software-card-top">
+        <div class="software-title-group">
+          <div class="software-title">KIMinder360</div>
+          <div class="software-subtitle">Situational Awareness Training App</div>
         </div>
-        <div class="form-group">
-          <label class="form-label">Subject</label>
-          <input type="text" id="contact-subject" class="form-input" placeholder="Project Inquiry / Role / Just Reaching Out" />
+        <div class="software-logo-wrap">
+          <img src="images/kiminder360-logo.png" alt="" class="software-logo"
+               onerror="if(!this.dataset.fb){this.dataset.fb='1';this.src='images/software-fallback.png';}else{this.closest('.software-logo-wrap').style.display='none';}">
         </div>
-        <div class="form-group">
-          <label class="form-label">Message</label>
-          <textarea id="contact-message" class="form-textarea" placeholder="Details about the project, position, or any question I can assist with..."></textarea>
-        </div>
-        <button class="btn btn-primary" style="align-self:flex-start; border:none;" onclick="sendEmail()">Send Message →</button>
+      </div>
+      <p class="software-desc">My senior year Capstone project at NAU. A mobile app for Android focused on dynamic real world situational awareness training, with comprehensive functionality for a customizable user experience. Built for a real client, learning to translate exactly what they needed into a working product.</p>
+      <div class="software-stack">
+        <span class="stack-tag">Android Studio</span>
+        <span class="stack-tag">Android Compose</span>
+        <span class="stack-tag">Kotlin</span>
+        <span class="stack-tag">Google Play</span>
+      </div>
+      <div class="software-actions">
+        <a href="https://sce.nau.edu/capstone/projects/CS/2026/KIMinder360_F25/index.html" class="btn btn-ghost" target="_blank">Website</a>
+        <a href="https://github.com/Oracle451/KIMinder360MobileApp" class="btn btn-ghost" target="_blank">GitHub</a>
       </div>
     </div>
+
+    <div class="software-card reveal" style="transition-delay:0.2s">
+      <div class="software-card-top">
+        <div class="software-title-group">
+          <div class="software-title">Mercy</div>
+          <div class="software-subtitle">Terminal-Based Text Adventure Game</div>
+        </div>
+        <div class="software-logo-wrap">
+          <img src="images/mercy-logo.png" alt="" class="software-logo"
+               onerror="if(!this.dataset.fb){this.dataset.fb='1';this.src='images/software-fallback.png';}else{this.closest('.software-logo-wrap').style.display='none';}">
+        </div>
+      </div>
+      <p class="software-desc">A terminal-based text adventure game built to sharpen my skills in complex logic and streamlining. This game is a fully fleshed-out experience designed to match the feel of a 3D action-adventure title.</p>
+      <div class="software-stack">
+        <span class="stack-tag">Objective C</span>
+        <span class="stack-tag">Metadata Embedding</span>
+        <span class="stack-tag">Itch.io</span>
+        <span class="stack-tag">Terminal</span>
+      </div>
+      <div class="software-actions">
+        <a href="https://bluebazooka25.itch.io/mercy" class="btn btn-ghost" target="_blank">Itch.io Page</a>
+        <a href="Mercy Install Package (Patch 1.0.7).zip" class="btn btn-ghost" download>Download</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="centered-block reveal" style="margin-top:3.5rem;">
+    <a href="software.html" class="btn btn-primary">View All Software</a>
+  </div>
+</section>
+
+<!-- SKILLS STRIP -->
+<section id="toolbox">
+  <div class="section-header reveal">
+    <div class="section-title-row">
+      <h2 class="section-title">Toolbox</h2>
+      <div class="section-line"></div>
+    </div>
+  </div>
+
+  <div class="centered-block reveal">
+    <div class="skill-list">
+      <span class="skill-pill">C/C++</span>
+      <span class="skill-pill">C#</span>
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">Kotlin</span>
+      <span class="skill-pill">JavaScript</span>
+      <span class="skill-pill">SQL</span>
+      <span class="skill-pill">Object Oriented Programming</span>
+      <span class="skill-pill">Full Stack Development</span>
+      <span class="skill-pill">REST APIs</span>
+      <span class="skill-pill">Relational Databases</span>
+      <span class="skill-pill">Git</span>
+      <span class="skill-pill">Linux</span>
+      <span class="skill-pill">React</span>
+      <span class="skill-pill">Node.js</span>
+      <span class="skill-pill">Android Studio</span>
+      <span class="skill-pill">Godot</span>
+      <span class="skill-pill">Electron</span>
+    </div>
+    <a href="about.html" class="btn btn-primary">Full Skill Breakdown</a>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section id="contact-cta">
+  <div class="centered-block reveal">
+    <h2 class="section-title" style="margin-bottom:1.2rem;">Let's build something great together.</h2>
+    <p style="color:var(--ink-soft); font-weight:300; max-width:560px; margin:0 auto 0.5rem;">My inbox is always open, whether you're reaching out about a full-time role, contract work, or just following up on something that caught your attention here.</p>
+    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-copy">© 2026 <span>Cole Bishop</span>. Always Aiming to Improve.</div>
-  <a href="#home" class="footer-scroll">↑ Back to top</a>
+  <a href="#top" class="footer-scroll">↑ Back to top</a>
 </footer>
 
 <script src="main.js"></script>
