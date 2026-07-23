@@ -2,7 +2,7 @@
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
+}, { threshold: 0.05, rootMargin: '0px 0px -80px 0px' });
 reveals.forEach(el => observer.observe(el));
 
 const navToggle = document.getElementById('mobile-nav-toggle');
@@ -62,7 +62,7 @@ function sendEmail() {
   window.open(gmailUrl, '_blank');
 }
 
-// Make each software card clickable — takes you to its first action link
+// Make each software card clickable, takes you to its first action link
 // (e.g. the live site / itch.io page / GitHub repo), unless the click
 // landed directly on one of the card's own buttons, which handle
 // themselves normally.
