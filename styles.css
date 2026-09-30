@@ -948,7 +948,9 @@ footer {
                 visibility 0s;
     max-height: 420px;
     opacity: 1;
-    padding: 0.4rem 1.6rem 1.9rem;
+    /* bottom padding matches the top so there's no dead space under the
+       last link (it was 1.9rem). Still clear of the 24px corner radius. */
+    padding: 0.4rem 1.6rem 0.5rem;
     border-top-color: var(--line);
   }
 
