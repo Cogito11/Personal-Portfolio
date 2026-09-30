@@ -4,6 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Bishop Development</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 <link rel="icon" href="favicon.ico" sizes="any" />
@@ -82,7 +84,7 @@
           <div class="contact-link-icon">in</div>
           <div class="contact-link-text">
             <div class="contact-link-label">LinkedIn</div>
-            <div class="contact-link-value">linkedin.com/in/colebishop</div>
+            <div class="contact-link-value">linkedin.com/in/cole-b-56060323a</div>
           </div>
           <span class="contact-link-arrow"></span>
         </a>
@@ -102,20 +104,20 @@
       <div class="contact-form">
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label">Name</label>
+            <label class="form-label" for="contact-name">Name</label>
             <input type="text" id="contact-name" class="form-input" placeholder="John Smith" />
           </div>
           <div class="form-group">
-            <label class="form-label">Email</label>
+            <label class="form-label" for="contact-email">Email</label>
             <input type="email" id="contact-email" class="form-input" placeholder="john@company.com" />
           </div>
         </div>
         <div class="form-group">
-          <label class="form-label">Subject</label>
+          <label class="form-label" for="contact-subject">Subject</label>
           <input type="text" id="contact-subject" class="form-input" placeholder="Project Inquiry / Role / Just Reaching Out" />
         </div>
         <div class="form-group">
-          <label class="form-label">Message</label>
+          <label class="form-label" for="contact-message">Message</label>
           <textarea id="contact-message" class="form-textarea" placeholder="Details about the project, position, or any question I can assist with..."></textarea>
         </div>
         <button class="btn btn-primary" style="align-self:flex-start; border:none;" onclick="sendEmail()">Send Message</button>
