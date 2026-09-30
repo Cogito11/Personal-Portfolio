@@ -1,7 +1,19 @@
 // Scroll reveal
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    el.classList.add('visible');
+    observer.unobserve(el);
+    // The staggered reveal uses an inline transition-delay. Left in place it
+    // also delays every hover animation on the element (up to 0.3s of lag),
+    // so clear it once the reveal has finished.
+    if (el.style.transitionDelay) {
+      const delay = parseFloat(el.style.transitionDelay) || 0;
+      setTimeout(() => { el.style.transitionDelay = ''; }, (delay + 0.5) * 1000);
+    }
+  });
 }, { threshold: 0.05, rootMargin: '0px 0px -80px 0px' });
 reveals.forEach(el => observer.observe(el));
 
@@ -83,4 +95,20 @@ document.querySelectorAll('.software-card').forEach((card) => {
     }
     window.location.href = primaryLink.href;
   });
+});
+
+// Software card logos: if an image is missing, swap in a monogram tile of the
+// project's first letter so every card header keeps the same layout (instead
+// of the title jumping left when a logo is absent).
+document.querySelectorAll('.software-logo').forEach((img) => {
+  const showMonogram = () => {
+    const wrap = img.closest('.software-logo-wrap');
+    const title = img.closest('.software-card')?.querySelector('.software-title');
+    if (!wrap || !title) return;
+    wrap.classList.add('is-monogram');
+    wrap.setAttribute('aria-hidden', 'true');
+    wrap.textContent = title.textContent.trim().charAt(0).toUpperCase();
+  };
+  if (img.complete && img.naturalWidth === 0) showMonogram();
+  else img.addEventListener('error', showMonogram, { once: true });
 });
